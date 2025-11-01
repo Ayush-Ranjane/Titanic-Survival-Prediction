@@ -30,7 +30,8 @@ export default function App() {
 
     try {
       // Send the POST request to our *real* FastAPI backend
-      const response = await fetch('http://127.0.0.1:8000/predict', {
+      const API_URL = "https://titanic-survival-prediction-98nz.onrender.com";
+      const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
