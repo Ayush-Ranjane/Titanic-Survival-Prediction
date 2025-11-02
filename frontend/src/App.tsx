@@ -28,6 +28,9 @@ export default function App() {
     setIsLoading(true);
     setResult(null);
 
+    // --- ADD THIS LINE FOR DEBUGGING ---
+    console.log("Data being sent to API:", data);
+
     try {
       // Send the POST request to our *real* FastAPI backend
       const API_URL = "https://titanic-survival-prediction-98nz.onrender.com";
