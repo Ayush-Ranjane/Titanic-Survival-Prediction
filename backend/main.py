@@ -19,7 +19,7 @@ app = FastAPI(
 origins = [
     "http://localhost:3000",
     "http://localhost",
-    "https://frolicking-llama-5cf9c1.netlify.app/"
+    "https://titanic-survival-prediction-ayush.netlify.app/"
 ]
 
 app.add_middleware(
