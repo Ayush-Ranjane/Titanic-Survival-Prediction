@@ -16,18 +16,19 @@ app = FastAPI(
 # ==========================================================
 # This allows your React app (running on localhost:3000)
 # to make requests to this API.
+# In backend/main.py
+
 origins = [
-    "http://localhost:3000",
-    "http://localhost",
-    "https://titanic-survival-prediction-ayush.netlify.app/"
+    "http://localhost:3000",  # For local testing
+    "https://titanic-survival-prediction-ayush.netlify.app"  # <-- ADD THIS LINE
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=origins, # This list is now updated
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 # ==========================================================
 
